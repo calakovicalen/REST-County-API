@@ -1,0 +1,39 @@
+.container {
+  position: relative;
+  display: flex;
+}
+
+.container > svg {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+}
+
+.input {
+  min-width: 21.4375rem;
+  max-width: 30rem;
+  min-height: 3rem;
+  max-height: 4rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 0 5rem;
+  font-size: 0.75rem;
+  caret-color: none;
+  flex-grow: 1;
+  transition: 0.5s;
+  font-weight: 400;
+}
+
+.input::placeholder {
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.input-white-mode::placeholder {
+  color: #c4c4c4;
+}
+
+.input-dark-mode::placeholder {
+  color: #ffffff;
+}

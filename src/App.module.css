@@ -1,0 +1,12 @@
+.app {
+  height: auto;
+  transition: all 0.5s;
+}
+
+.dark-theme {
+  background: #202c36;
+}
+
+.white-theme {
+  background: #ffffff;
+}

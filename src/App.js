@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchCountriesData } from "./store/country-actions";
+import { Route, Routes } from "react-router-dom";
+import Home from "./routes/Home";
+import Country from "./routes/Country";
+import Header from "./components/UI/Header";
 
-function App() {
+import classes from "./App.module.css";
+
+const App = () => {
+  const dispatch = useDispatch();
+  const theme = useSelector((state) => state.theme.theme);
+
+  useEffect(() => {
+    dispatch(fetchCountriesData());
+    console.log("FETCHING DATA...");
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className={`${classes["app"]} ${
+        theme ? classes["white-theme"] : classes["dark-theme"]
+      }`}
+    >
+      <Header />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="country/*" element={<Country />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

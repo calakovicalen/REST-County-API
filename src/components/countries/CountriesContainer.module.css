@@ -1,0 +1,17 @@
+.countries-container {
+  padding: 0 3.375rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  color: #000;
+}
+
+.countries-filter-container {
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.5rem;
+  width: 100%;
+}
