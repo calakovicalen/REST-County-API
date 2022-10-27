@@ -1,7 +1,8 @@
 .big-container {
   transition: all 0.5s;
   padding-top: 2.5rem;
-  height: 100vh;
+  padding-bottom: 2.5rem;
+  height: auto;
 }
 
 .container {
